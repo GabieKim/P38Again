@@ -10,6 +10,8 @@
 #include "Components/ArrowComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
 
+#include "EnhancedInputComponent.h"
+
 // Sets default values
 AMyPawn::AMyPawn()
 {
@@ -79,5 +81,12 @@ void AMyPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	UEnhancedInputComponent* InputComponent =
+		CastChecked<UEnhancedInputComponent>(PlayerInputComponent);
+
+	if (InputComponent)
+	{
+
+	}
 }
 
